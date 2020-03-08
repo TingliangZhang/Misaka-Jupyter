@@ -1,6 +1,8 @@
 # Misaka-Jupyter
 
+Dependence
 
+matplotlib numpy
 
 ## JupyterLab Installation
 
@@ -29,7 +31,7 @@ jupyter lab
 
 ## [Jupyter Widgets](https://ipywidgets.readthedocs.io/en/latest/index.html#)
 
-## With pip
+## Installation With pip
 
 ```
 pip install ipywidgets
