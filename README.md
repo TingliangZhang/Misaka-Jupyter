@@ -2,7 +2,11 @@
 
 Dependence
 
-matplotlib numpy
+```
+pip install digi-xbee matplotlib numpy 
+```
+
+
 
 ## JupyterLab Installation
 
@@ -45,3 +49,6 @@ jupyter nbextension enable --py widgetsnbextension
 [JupyterLab Documentation](https://jupyterlab.readthedocs.io/)
 
 [Jupyter Widgets](https://ipywidgets.readthedocs.io/en/latest/index.html#)
+
+[XBee Python Library](https://xbplib.readthedocs.io/en/stable/index.html)
+
