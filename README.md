@@ -27,6 +27,19 @@ jupyter lab
 
 
 
+## [Jupyter Widgets](https://ipywidgets.readthedocs.io/en/latest/index.html#)
+
+## With pip
+
+```
+pip install ipywidgets
+jupyter nbextension enable --py widgetsnbextension
+```
+
+
+
 ## 参考
 
 [JupyterLab Documentation](https://jupyterlab.readthedocs.io/)
+
+[Jupyter Widgets](https://ipywidgets.readthedocs.io/en/latest/index.html#)
