@@ -63,6 +63,22 @@ $ pip install bqplot
 $ jupyter labextension install bqplot
 ```
 
+bqplot    问题    Error displaying widget: model not found
+
+通过list看一下版本是不是最新的
+
+```
+jupyter labextension list
+```
+
+尝试安装jupyter-matplotlib（没有卵用）
+
+```
+jupyter labextension install jupyter-matplotlib
+```
+
+uninstall it with `jupyter labextension uninstall bqplot`)
+
 [pythreejs](https://github.com/jovyan/pythreejs) Installation Using pip:
 
 ```
