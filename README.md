@@ -96,6 +96,66 @@ jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-leaflet
 
 
 
+# Plotly
+
+[Getting Started with Plotly in Python](https://plot.ly/python/getting-started/)
+
+plotly.py may be installed using pip...
+
+```
+$ pip install plotly
+```
+
+#### JupyterLab Support (Python 3.5+)
+
+For use in [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/), install the `jupyterlab` and `ipywidgets` packages using pip...
+
+```
+$ pip install jupyterlab "ipywidgets"
+```
+
+Then run the following commands to install the required JupyterLab extensions (note that this will require [`node`](https://nodejs.org/) to be installed):
+
+```
+# Avoid "JavaScript heap out of memory" errors during extension installation
+# (OS X/Linux)
+export NODE_OPTIONS=--max-old-space-size=4096
+# (Windows)
+set NODE_OPTIONS=--max-old-space-size=4096
+
+# Jupyter widgets extension
+jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
+
+# jupyterlab renderer support
+jupyter labextension install jupyterlab-plotly --no-build
+
+# FigureWidget support
+jupyter labextension install plotlywidget --no-build
+
+# Build extensions (must be done to activate extensions since --no-build is used above)
+jupyter lab build
+
+# Unset NODE_OPTIONS environment variable
+# (OS X/Linux)
+unset NODE_OPTIONS
+# (Windows)
+set NODE_OPTIONS=
+```
+
+These packages contain everything you need to run JupyterLab...
+
+```
+$ jupyter lab
+```
+
+and display plotly figures inline using the `plotly_mimetype` renderer...
+
+```
+import plotly.graph_objects as go
+fig = go.Figure(data=go.Bar(y=[2, 3, 1]))
+fig.show()
+```
+
 ## 参考
 
 [JupyterLab Documentation](https://jupyterlab.readthedocs.io/)
