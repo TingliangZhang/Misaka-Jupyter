@@ -1,16 +1,9 @@
-# Copyright 2019, Digi International Inc.
-#
-# Permission to use, copy, modify, and/or distribute this software for any
-# purpose with or without fee is hereby granted, provided that the above
-# copyright notice and this permission notice appear in all copies.
-#
-# THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-# WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-# MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-# ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-# WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-# ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-# OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+#   Nodes
+#   0013A20040991D4C - 1
+#   0013A200408DF16F - 2
+#   0013A20040991D77 - 3
+#   0013A200409C00A2 - 4
+#   0013A200409C0277 - Test
 
 import time
 
@@ -81,15 +74,18 @@ def main():
         print_nodes(xbee_network)
 
 
-        print("\n* Clear network...")
-        xbee_network.clear()
 
-        xbee_network.start_discovery_process()
+        # print("\n* Clear network...")
+        # xbee_network.clear()
+
+        # xbee_network.start_discovery_process()
         
-        while xbee_network.is_discovery_running():
-            time.sleep(1)
+        # while xbee_network.is_discovery_running():
+        #     time.sleep(1)
 
-        print_nodes(xbee_network)
+        # print_nodes(xbee_network)
+
+
 
         # print("\n* Manually add a new remote XBee device...")
         # remote = RemoteXBeeDevice(
