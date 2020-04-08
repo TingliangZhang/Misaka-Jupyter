@@ -80,6 +80,17 @@ def main():
 
         print_nodes(xbee_network)
 
+
+        print("\n* Clear network...")
+        xbee_network.clear()
+
+        xbee_network.start_discovery_process()
+        
+        while xbee_network.is_discovery_running():
+            time.sleep(1)
+
+        print_nodes(xbee_network)
+
         # print("\n* Manually add a new remote XBee device...")
         # remote = RemoteXBeeDevice(
         #     xbee,
