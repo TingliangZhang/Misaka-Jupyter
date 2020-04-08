@@ -19,7 +19,7 @@ from digi.xbee.models.status import NetworkDiscoveryStatus
 from digi.xbee.devices import XBeeDevice, RemoteXBeeDevice
 
 # TODO: Replace with the serial port where your local module is connected to.
-PORT = "COM11"
+PORT = "COM5"
 # TODO: Replace with the baud rate of your local module.
 BAUD_RATE = 9600
 
@@ -80,36 +80,36 @@ def main():
 
         print_nodes(xbee_network)
 
-        print("\n* Manually add a new remote XBee device...")
-        remote = RemoteXBeeDevice(
-            xbee,
-            x64bit_addr=XBee64BitAddress.from_hex_string("1234567890ABCDEF"),
-            node_id="manually_added")
-        xbee_network.add_remote(remote)
+        # print("\n* Manually add a new remote XBee device...")
+        # remote = RemoteXBeeDevice(
+        #     xbee,
+        #     x64bit_addr=XBee64BitAddress.from_hex_string("1234567890ABCDEF"),
+        #     node_id="manually_added")
+        # xbee_network.add_remote(remote)
 
-        print_nodes(xbee_network)
+        # print_nodes(xbee_network)
 
-        time.sleep(1)
+        # time.sleep(1)
 
-        print("\n* Update the last added remote XBee device...")
-        remote = RemoteXBeeDevice(xbee, x64bit_addr=remote.get_64bit_addr(), node_id="updated_node")
-        xbee_network.add_remote(remote)
+        # print("\n* Update the last added remote XBee device...")
+        # remote = RemoteXBeeDevice(xbee, x64bit_addr=remote.get_64bit_addr(), node_id="updated_node")
+        # xbee_network.add_remote(remote)
 
-        print_nodes(xbee_network)
+        # print_nodes(xbee_network)
 
-        time.sleep(1)
+        # time.sleep(1)
 
-        print("\n* Manually remove a remote XBee device...")
-        xbee_network.remove_device(remote)
+        # print("\n* Manually remove a remote XBee device...")
+        # xbee_network.remove_device(remote)
 
-        print_nodes(xbee_network)
+        # print_nodes(xbee_network)
 
-        time.sleep(1)
+        # time.sleep(1)
 
-        print("\n* Clear network...")
-        xbee_network.clear()
+        # print("\n* Clear network...")
+        # xbee_network.clear()
 
-        print_nodes(xbee_network)
+        # print_nodes(xbee_network)
 
     finally:
         if xbee_network is not None:
